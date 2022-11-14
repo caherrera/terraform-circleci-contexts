@@ -1,13 +1,15 @@
 # CircleCI Context Environment Variables Terraform Module
+Create contexts with environment variables all-in-one
 
 ## Usage
 
 **provider.tf**
+
 ```hcl
 terraform {
   required_providers {
     circleci = {
-      source = "mrolla/circleci"
+      source  = "mrolla/circleci"
       version = "0.6.1"
     }
   }
@@ -21,12 +23,14 @@ provider "circleci" {
 ```
 
 **main.tf**
+
 ```hcl
 module "context" {
   source      = "caherrera/contexts/circleci"
+  version     = "0.1.1"
   context     = "my-custom-context-by-${terraform.workspace}"
   environment = {
-    FOO = "BAR"    
+    FOO = "BAR"
   }
 }
 ```

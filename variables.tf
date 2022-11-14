@@ -3,6 +3,7 @@ variable "context" {
   type        = string
 }
 variable "environment" {
-  description = "Key Value set of variables "
-  
+  description = "Key Value set of variables"
+  type        = map(any)
+
 }
