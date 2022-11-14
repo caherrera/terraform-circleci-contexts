@@ -4,5 +4,5 @@ variable "context" {
 }
 variable "environment" {
   description = "Key Value set of variables "
-  type        = object({})
+  
 }
